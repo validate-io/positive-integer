@@ -1,4 +1,4 @@
-positive-integer
+Positive Integer
 ===
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Dependencies][dependencies-image]][dependencies-url]
 
@@ -17,18 +17,37 @@ For use in the browser, use [browserify](https://github.com/substack/node-browse
 ## Usage
 
 ``` javascript
-var foo = require( 'validate.io-positive-integer' );
+var isPositiveInteger = require( 'validate.io-positive-integer' );
 ```
 
-#### foo( value )
+#### isPositiveInteger( value )
 
-What does this function do?
+Validates if a `value` is a positive `integer`.
+
+``` javascript
+var value = 5;
+
+var bool = isPositiveInteger( value );
+// returns true
+```
 
 
 ## Examples
 
 ``` javascript
-var foo = require( 'validate.io-positive-integer' );
+var isPositiveInteger = require( 'validate.io-positive-integer' );
+
+console.log( isPositiveInteger( 5 ) );
+// returns true
+
+console.log( isPositiveInteger( 0 ) );
+// returns false
+
+console.log( isPositiveInteger( Math.PI ) );
+// returns false
+
+console.log( isPositiveInteger( -5 ) );
+// returns false
 ```
 
 To run the example code from the top-level application directory,
